@@ -1,0 +1,16 @@
+<!-- blog/templates/confirm.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Action</title>
+</head>
+<body>
+    <h1>Are you sure you want to proceed?</h1>
+    <p>{{ message }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, proceed</button>
+        <a href="{% url 'post_list' %}">Cancel</a>
+    </form>
+</body>
+</html>

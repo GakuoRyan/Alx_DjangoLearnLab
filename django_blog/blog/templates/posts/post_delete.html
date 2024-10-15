@@ -1,0 +1,15 @@
+<!-- blog/templates/posts/post_confirm_delete.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Delete</title>
+</head>
+<body>
+    <h2>Are you sure you want to delete "{{ object.title }}"?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+    </form>
+    <a href="{% url 'post_list' %}">Cancel</a>
+</body>
+</html>

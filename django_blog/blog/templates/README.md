@@ -1,0 +1,1 @@
+this is a css and js file for django 
